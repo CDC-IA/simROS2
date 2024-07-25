@@ -13,6 +13,8 @@ geometry_msgs/msg/TwistWithCovariance
 geometry_msgs/msg/Vector3
 nav_msgs/msg/Odometry
 sensor_msgs/msg/Image
+sensor_msgs/msg/Imu
+sensor_msgs/msg/JointState
 sensor_msgs/msg/LaserScan
 sensor_msgs/msg/PointCloud2
 sensor_msgs/msg/PointField
