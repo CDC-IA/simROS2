@@ -943,7 +943,8 @@ public:
 
     bool initialize()
     {
-        rclcpp::init(0, nullptr);
+        if(!rclcpp::ok())
+            rclcpp::init(0, nullptr);
 
         auto node_name = sim::getNamedStringParam("ROS2Interface.nodeName");
 
@@ -970,7 +971,9 @@ public:
 
     void shutdown()
     {
-        rclcpp::shutdown();
+        if(rclcpp::ok())
+            rclcpp::shutdown();
+
         params_client = nullptr;
         node = nullptr;
 
